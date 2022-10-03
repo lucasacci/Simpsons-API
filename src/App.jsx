@@ -31,7 +31,7 @@ function App() {
       );
       console.log(respuesta);
       const dato = await respuesta.json();
-      console.log(dato[0]);
+    
       //guardar la frase del personaje en el state
       setPersonaje(dato[0]);
       setSpinner(false)
@@ -52,11 +52,11 @@ function App() {
   const conditionalComp = (spinner) ? ( <Spinner2/>) : (<Frase personaje={personaje}></Frase>)
 
   return (
-        <Container className='my-5'>
-          <section>
+        <Container className='my-5 '>
+          <section className='text-center'>
 
     <div className='col-12 col-lg-12 divImgButton'>
-    <img src="https://trello.com/1/cards/63288a1289c67400fd5b534f/attachments/632b24ad1ed8b700597e4050/previews/632b24ae1ed8b700597e418b/download/theSimpson.png" style={{width:"40%"}} className="p-3 imgSimpsons" alt="Los simpsons titulo" />
+    <img src="https://www.pngmart.com/files/5/The-Simpsons-PNG-Photos.png" style={{width:"40%"}} className="p-3 imgSimpsons" alt="Los simpsons titulo" />
     <Button className='btn' variant='warning' onClick={consultarAPI}>Get phrase</Button>
     </div>
     <div className='my-5'>
